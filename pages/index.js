@@ -11,8 +11,9 @@ export default function Home({articles}) {
       </Head>
       
       <Header />
-      
-    <div className={styles.main_body}>
+    
+    <div className="default-container">
+<h2 className={"fancyheadings"} data-aos="fade-down" >Our Projects</h2>
       <ArticlesList articles={articles} />
     </div>
 

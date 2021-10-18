@@ -11,7 +11,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  transition: all 1s;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 * {
@@ -20,6 +21,11 @@ a {
 
 a:hover {
   color:#f26b50;
+}
+
+p
+{
+  color: #6f6f6f;
 }
 
 h1,h2,h3,h4 {
@@ -76,6 +82,51 @@ img{
 }
 
 
+/* Headings Underline animation */
+.fancyheadings {
+  color: #f84525;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  justify-content: center;  
+  transition: width 0.5s;
+}
+
+.fancyheadings::after
+{
+  content:"";
+  height:3px;
+  background-color: #f84525;
+  bottom: -8px;
+  width: 100px;
+  position: absolute;
+  border-radius: 10px;
+  transition: width 0.5s;
+}
+
+.fancyheadings:hover:after {
+  width: 200px;
+}
+
+.default-container {
+  max-width: var(--desktop-content-width);
+  width:100%
+}
+
+:root
+{
+  --mobile-width: 768px;
+  --tablet-width: 1024px;
+  --laptop-width: 1200px;
+  --desktop-width: 1680px;
+  --desktop-content-width: 1200px;
+--laptop-content-width: 1080px;
+--small-laptop-content-width: 960px;
+}
+
+
+
 @keyframes text {
   0%{
       opacity:0;
@@ -94,3 +145,4 @@ img{
   }
   
 }
+

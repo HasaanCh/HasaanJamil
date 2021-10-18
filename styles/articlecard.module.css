@@ -4,20 +4,23 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 30px;
+  margin-bottom: 50px;
     border: 1px solid black;
     border-radius: 20px;
-    width: 31%;
-    margin: 10px 10px;
+    /* margin:  */
     border: 1px solid #b1b1b1;
     box-shadow: 7px 7px 18px -8px #4f4f4f;
     transition: all 0.2s;
     transform: translateY(0px);
     background-color: white;
-    
+    max-width: 560px;
 }
 
 .article_card:hover
 {
     transform: translateY(-3px);
+}
+
+.article_card a {
+    padding: 30px;
 }
