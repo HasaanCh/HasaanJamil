@@ -1,0 +1,19 @@
+.article_wrapper
+{
+    width: 100%;
+    text-align: center;
+    padding-top:50px
+}
+
+.article_title
+{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.article_body
+{
+    font-size: 1rem;
+
+}
