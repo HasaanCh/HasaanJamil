@@ -14,7 +14,7 @@ export default function Home({articles}) {
     
     <div className="default-container">
 <h2 className={"fancyheadings"} data-aos="fade-down" >Our Projects</h2>
-      <ArticlesList articles={articles} />
+      <ArticlesList articles={articles}/>
     </div>
 
 
@@ -42,6 +42,7 @@ export default function Home({articles}) {
 export const getStaticProps = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6');
   const articles = await res.json();
+
 
   return {
     props:

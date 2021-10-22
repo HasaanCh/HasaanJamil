@@ -4,10 +4,9 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-  margin-bottom: 50px;
+    margin-bottom: 50px;
     border: 1px solid black;
     border-radius: 20px;
-    /* margin:  */
     border: 1px solid #b1b1b1;
     box-shadow: 7px 7px 18px -8px #4f4f4f;
     transition: all 0.2s;
@@ -18,7 +17,7 @@
 
 .article_card:hover
 {
-    transform: translateY(-3px);
+    transform: translateY(-3px) !important;
 }
 
 .article_card a {

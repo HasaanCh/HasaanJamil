@@ -1,7 +1,7 @@
 import style from '../styles/articles.module.css';
 import ArticleCard from './articlecard.component';
 
-const ArticlesList = ({articles}) => {
+const ArticlesList = ({articles,images}) => {
     return (
         <div className={style.article_section}>
 
