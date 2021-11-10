@@ -4,6 +4,7 @@ import Header from '../components/header.component'
 import styles from '../styles/indexhome.module.css';
 
 export default function Home({articles}) {
+  console.log(articles.data);
   return (
    <>
       <Head>
@@ -14,7 +15,7 @@ export default function Home({articles}) {
     
     <div className="default-container">
 <h2 className={"fancyheadings"} data-aos="fade-down" >Our Projects</h2>
-      <ArticlesList articles={articles}/>
+      <ArticlesList articles={articles.data}/>
     </div>
 
 
@@ -40,7 +41,7 @@ export default function Home({articles}) {
 
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6');
+  const res = await fetch('http://127.0.0.1:8447/api');
   const articles = await res.json();
 
 

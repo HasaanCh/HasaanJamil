@@ -1,8 +1,11 @@
+// Utility to connect to database
 import dbConnect from '../../utils/dbConnect';
+
+// Model for database
 import Posts from '../../models/posts';
 
-dbConnect();
 
+dbConnect();
 export default async (req, res) => {
     const { method } = req;
 
@@ -10,7 +13,6 @@ export default async (req, res) => {
         case 'GET':
             try {
                 const Postss = await Posts.find({});
-
                 res.status(200).json({ success: true, data: Postss })
             } catch (error) {
                 res.status(400).json({ success: false });
@@ -19,7 +21,6 @@ export default async (req, res) => {
         case 'POST':
             try {
                 const Posts = await Posts.create(req.body);
-
                 res.status(201).json({ success: true, data: Posts })
             } catch (error) {
                 res.status(400).json({ success: false});
